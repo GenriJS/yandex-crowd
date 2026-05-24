@@ -127,8 +127,15 @@ body {
     border: 2px solid #1F1F1F;
 }
 
-.header__btn:hover {
-    opacity: 0.9;
+.header__btn--primary:hover {
+    background: #FBCE51;
+    color: #1F1F1F;
+    border-color: #FBCE51;
+}
+
+.header__btn--secondary:hover {
+    background: #1F1F1F;
+    color: #FFFFFF;
 }
 
 @media (max-width: 767px) {
