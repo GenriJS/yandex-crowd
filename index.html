@@ -117,16 +117,129 @@
 
     <section class="participants">
         <div class="container participants__container">
+            <div class="participants__header">
+                <h2 class="participants__title">Участники турнира</h2>
+                <div class="participants__controls">
+                    <button type="button" class="participants__nav participants__nav--prev" aria-label="Предыдущий" data-participants-prev>
+                        <svg class="participants__nav-icon" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle class="participants__nav-circle" cx="22" cy="22" r="22" fill="#313131"/>
+                            <path class="participants__nav-arrow" d="M24.5382 13.5384L16.0767 21.9999L24.5382 30.4615" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                        </svg>
+                    </button>
+                    <div class="participants__counter">
+                        <span class="participants__counter-current" data-participants-current>1</span><span class="participants__counter-sep">/</span><span class="participants__counter-total" data-participants-total>6</span>
+                    </div>
+                    <button type="button" class="participants__nav participants__nav--next" aria-label="Следующий" data-participants-next>
+                        <svg class="participants__nav-icon" width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle class="participants__nav-circle" cx="22" cy="22" r="22" fill="#313131"/>
+                            <path class="participants__nav-arrow" d="M19.4618 13.5384L27.9233 21.9999L19.4618 30.4615" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
 
+            <div class="participants__slider" data-participants-slider>
+                <ul class="participants__list" data-participants-track>
+                    <li class="participants__card">
+                        <div class="participants__photo">
+                            <img src="/src/img/participants/person.png" alt="Хозе-Рауль Капабланка">
+                        </div>
+                        <h3 class="participants__name">Хозе-Рауль Капабланка</h3>
+                        <p class="participants__role">Чемпион мира по&nbsp;шахматам</p>
+                        <a href="#" class="participants__more">Подробнее</a>
+                    </li>
+                    <li class="participants__card">
+                        <div class="participants__photo">
+                            <img src="/src/img/participants/person.png" alt="Эммануил Ласкер">
+                        </div>
+                        <h3 class="participants__name">Эммануил Ласкер</h3>
+                        <p class="participants__role">Чемпион мира по&nbsp;шахматам</p>
+                        <a href="#" class="participants__more">Подробнее</a>
+                    </li>
+                    <li class="participants__card">
+                        <div class="participants__photo">
+                            <img src="/src/img/participants/person.png" alt="Александр Алехин">
+                        </div>
+                        <h3 class="participants__name">Александр Алехин</h3>
+                        <p class="participants__role">Чемпион мира по&nbsp;шахматам</p>
+                        <a href="#" class="participants__more">Подробнее</a>
+                    </li>
+                    <li class="participants__card">
+                        <div class="participants__photo">
+                            <img src="/src/img/participants/person.png" alt="Арон Нимцович">
+                        </div>
+                        <h3 class="participants__name">Арон Нимцович</h3>
+                        <p class="participants__role">Чемпион мира по&nbsp;шахматам</p>
+                        <a href="#" class="participants__more">Подробнее</a>
+                    </li>
+                    <li class="participants__card">
+                        <div class="participants__photo">
+                            <img src="/src/img/participants/person.png" alt="Рихард Рети">
+                        </div>
+                        <h3 class="participants__name">Рихард Рети</h3>
+                        <p class="participants__role">Чемпион мира по&nbsp;шахматам</p>
+                        <a href="#" class="participants__more">Подробнее</a>
+                    </li>
+                    <li class="participants__card">
+                        <div class="participants__photo">
+                            <img src="/src/img/participants/person.png" alt="Остап Бендер">
+                        </div>
+                        <h3 class="participants__name">Остап Бендер</h3>
+                        <p class="participants__role">Гроссмейстер</p>
+                        <a href="#" class="participants__more">Подробнее</a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="participants__controls participants__controls--mobile">
+                <button type="button" class="participants__nav participants__nav--prev" aria-label="Предыдущий" data-participants-prev>
+                    <svg class="participants__nav-icon" width="36" height="36" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle class="participants__nav-circle" cx="22" cy="22" r="22" fill="#313131"/>
+                        <path class="participants__nav-arrow" d="M24.5382 13.5384L16.0767 21.9999L24.5382 30.4615" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                    </svg>
+                </button>
+                <div class="participants__counter">
+                    <span class="participants__counter-current" data-participants-current>1</span><span class="participants__counter-sep">/</span><span class="participants__counter-total" data-participants-total>6</span>
+                </div>
+                <button type="button" class="participants__nav participants__nav--next" aria-label="Следующий" data-participants-next>
+                    <svg class="participants__nav-icon" width="36" height="36" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                        <circle class="participants__nav-circle" cx="22" cy="22" r="22" fill="#313131"/>
+                        <path class="participants__nav-arrow" d="M19.4618 13.5384L27.9233 21.9999L19.4618 30.4615" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                    </svg>
+                </button>
+            </div>
         </div>
     </section>
 
+    <div class="marquee marquee--bottom" aria-label="Бегущая строка">
+        <div class="marquee__track">
+            <ul class="marquee__list">
+                <li class="marquee__item">Дело помощи утопающим — дело рук самих утопающих!</li>
+                <li class="marquee__dot" aria-hidden="true"></li>
+                <li class="marquee__item">Шахматы двигают вперёд не только культуру, но и экономику!</li>
+                <li class="marquee__dot" aria-hidden="true"></li>
+                <li class="marquee__item">Лёд тронулся, господа присяжные заседатели!</li>
+                <li class="marquee__dot" aria-hidden="true"></li>
+            </ul>
+            <ul class="marquee__list" aria-hidden="true">
+                <li class="marquee__item">Дело помощи утопающим — дело рук самих утопающих!</li>
+                <li class="marquee__dot"></li>
+                <li class="marquee__item">Шахматы двигают вперёд не только культуру, но и экономику!</li>
+                <li class="marquee__dot"></li>
+                <li class="marquee__item">Лёд тронулся, господа присяжные заседатели!</li>
+                <li class="marquee__dot"></li>
+            </ul>
+        </div>
+    </div>
 
 
-    <footer>
 
+    <footer class="footer">
+        <div class="container footer__container">
+
+        </div>
     </footer>
 
-    
+    <script src="/src/js/participants.js"></script>
 </body>
 </html>
