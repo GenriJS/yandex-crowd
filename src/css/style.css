@@ -358,7 +358,23 @@ body {
 }
 
 .grossmeister__container {
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 17px;
+}
+
+.grossmeister__content {
+
+}
+
+@media (max-width: 767px) {
+    .grossmeister__container {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 19px;
+    }
 }
 
 /* end of grossmeister */
