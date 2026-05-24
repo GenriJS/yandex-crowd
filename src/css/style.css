@@ -232,6 +232,16 @@ body {
     to   { transform: translateX(-50%); }
 }
 
+@media (max-width: 767px) {
+    .marquee {
+        padding: 10px 0;
+    }
+
+    .marquee__item {
+        font-size: 16px;
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     .marquee__track { animation-duration: 120s; }
 }
