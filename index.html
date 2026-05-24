@@ -114,6 +114,97 @@
         </div>
     </section>
 
+    <section class="stages">
+        <div class="container stages__container">
+            <div class="stages__header">
+                <h2 class="stages__title">Этапы преображения Васюков</h2>
+                <p class="stages__subtitle">Будущие источники обогащения васюкинцев</p>
+            </div>
+
+            <div class="stages__grid stages__grid--desk">
+                <article class="stages__card stages__card--pos1">
+                    <div class="stages__number">1</div>
+                    <p class="stages__text">Строительство железнодорожной магистрали Москва-Васюки</p>
+                </article>
+                <article class="stages__card stages__card--pos2">
+                    <div class="stages__number">2</div>
+                    <p class="stages__text">Открытие фешенебельной гостиницы «Проходная пешка» и&nbsp;других небоскрёбов</p>
+                </article>
+                <article class="stages__card stages__card--pos3">
+                    <div class="stages__number">3</div>
+                    <p class="stages__text">Поднятие сельского хозяйства в&nbsp;радиусе на&nbsp;тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</p>
+                </article>
+                <article class="stages__card stages__card--pos4">
+                    <div class="stages__number">4</div>
+                    <p class="stages__text">Строительство дворца для&nbsp;турнира</p>
+                </article>
+                <article class="stages__card stages__card--pos5">
+                    <div class="stages__number">5</div>
+                    <p class="stages__text">Размещение гаражей<br>для&nbsp;гостевого<br>автотранспорта</p>
+                </article>
+                <article class="stages__card stages__card--pos6">
+                    <div class="stages__number">6</div>
+                    <p class="stages__text">Постройка сверхмощной радиостанции для&nbsp;передачи всему миру сенсационных результатов</p>
+                </article>
+                <article class="stages__card stages__card--pos7">
+                    <div class="stages__number">7</div>
+                    <p class="stages__text">Создание аэропорта «Большие Васюки» с&nbsp;регулярным отправлением почтовых самолётов и&nbsp;дирижаблей во&nbsp;все&nbsp;концы света, включая Лос-Анжелос и&nbsp;Мельбурн</p>
+                </article>
+            </div>
+
+            <div class="stages__slider stages__grid--mob" data-stages-slider>
+                <ul class="stages__list" data-stages-track>
+                    <li class="stages__card stages__card--slide">
+                        <div class="stages__number">1</div>
+                        <p class="stages__text">Строительство железнодорожной магистрали Москва-Васюки</p>
+                    </li>
+                    <li class="stages__card stages__card--slide">
+                        <div class="stages__number">2</div>
+                        <p class="stages__text">Открытие фешенебельной гостиницы «Проходная пешка» и&nbsp;других небоскрёбов</p>
+                    </li>
+                    <li class="stages__card stages__card--slide">
+                        <div class="stages__number">3</div>
+                        <p class="stages__text">Поднятие сельского хозяйства в&nbsp;радиусе на&nbsp;тысячу километров: производство овощей, фруктов, икры, шоколадных конфет</p>
+                    </li>
+                    <li class="stages__card stages__card--slide">
+                        <div class="stages__number">4</div>
+                        <p class="stages__text">Строительство дворца для&nbsp;турнира</p>
+                    </li>
+                    <li class="stages__card stages__card--slide">
+                        <div class="stages__number">5</div>
+                        <p class="stages__text">Размещение гаражей для&nbsp;гостевого автотранспорта</p>
+                    </li>
+                    <li class="stages__card stages__card--slide">
+                        <div class="stages__number">6</div>
+                        <p class="stages__text">Постройка сверхмощной радиостанции для&nbsp;передачи всему миру сенсационных результатов</p>
+                    </li>
+                    <li class="stages__card stages__card--slide">
+                        <div class="stages__number">7</div>
+                        <p class="stages__text">Создание аэропорта «Большие Васюки» с&nbsp;регулярным отправлением почтовых самолётов и&nbsp;дирижаблей во&nbsp;все&nbsp;концы света, включая Лос-Анжелос и&nbsp;Мельбурн</p>
+                    </li>
+                </ul>
+
+                <div class="stages__controls">
+                    <button type="button" class="stages__nav stages__nav--prev" aria-label="Предыдущий" data-stages-prev>
+                        <svg width="36" height="36" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="22" cy="22" r="22" fill="#313131"/>
+                            <path d="M24.5382 13.5384L16.0767 21.9999L24.5382 30.4615" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                        </svg>
+                    </button>
+                    <div class="stages__counter">
+                        <span class="stages__counter-current" data-stages-current>1</span><span class="stages__counter-sep">/</span><span class="stages__counter-total" data-stages-total>7</span>
+                    </div>
+                    <button type="button" class="stages__nav stages__nav--next" aria-label="Следующий" data-stages-next>
+                        <svg width="36" height="36" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <circle cx="22" cy="22" r="22" fill="#313131"/>
+                            <path d="M19.4618 13.5384L27.9233 21.9999L19.4618 30.4615" stroke="white" stroke-width="2" stroke-linecap="square"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
 
     <section class="participants">
         <div class="container participants__container">
@@ -241,5 +332,6 @@
     </footer>
 
     <script src="/src/js/participants.js"></script>
+    <script src="/src/js/stages.js"></script>
 </body>
 </html>
