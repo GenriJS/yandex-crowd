@@ -761,3 +761,27 @@ body {
 }
 
 /* end of participants */
+
+/* start of footer */
+
+.footer {
+    padding: 40px 0 72px;
+    background: #E9DED4;
+}
+
+.footer__text {
+    color: rgba(49, 49, 49, 0.6);
+    font-family: "Golos Text", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+}
+
+@media (max-width: 767px) {
+    .footer {
+        padding: 40px 0 60px;
+    }
+}
+
+/* end of footer */
