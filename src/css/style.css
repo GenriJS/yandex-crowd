@@ -457,6 +457,21 @@ body {
     gap: 12px;
 }
 
+.grossmeister__value-main {
+    position: relative;
+}
+
+.grossmeister__value-main::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 2px;
+    background: #F54932;
+}
+
 .grossmeister__value-extra {
     font-weight: 600;
 }
@@ -523,17 +538,6 @@ body {
         position: relative;
         padding-left: 12px;
         color: #313131;
-    }
-
-    .grossmeister__value--split .grossmeister__value-extra::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 2px;
-        height: 18px;
-        background: #F54932;
     }
 
     .grossmeister__note {
