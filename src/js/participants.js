@@ -28,9 +28,13 @@
         return b - a;
     }
 
+    function getPages() {
+        return Math.max(1, Math.ceil(total / getVisibleCount()));
+    }
+
     function update() {
         const visible = getVisibleCount();
-        const pages = Math.max(1, Math.ceil(total / visible));
+        const pages = getPages();
         if (index > pages - 1) index = pages - 1;
         if (index < 0) index = 0;
 
@@ -42,19 +46,39 @@
 
         currentEls.forEach((el) => { el.textContent = shownFromStart; });
 
-        const atStart = index <= 0;
-        const atEnd = index >= pages - 1;
-        prevBtns.forEach((b) => { b.disabled = atStart; b.classList.toggle('is-disabled', atStart); });
-        nextBtns.forEach((b) => { b.disabled = atEnd; b.classList.toggle('is-disabled', atEnd); });
+        prevBtns.forEach((b) => { b.disabled = false; b.classList.remove('is-disabled'); });
+        nextBtns.forEach((b) => { b.disabled = false; b.classList.remove('is-disabled'); });
     }
 
     function go(delta) {
-        index += delta;
+        const pages = getPages();
+        index = (index + delta + pages) % pages;
         update();
     }
 
-    prevBtns.forEach((b) => b.addEventListener('click', () => go(-1)));
-    nextBtns.forEach((b) => b.addEventListener('click', () => go(1)));
+    const AUTOPLAY_MS = 4000;
+    let autoplayTimer = null;
+    function startAutoplay() {
+        stopAutoplay();
+        autoplayTimer = setInterval(() => go(1), AUTOPLAY_MS);
+    }
+    function stopAutoplay() {
+        if (autoplayTimer) {
+            clearInterval(autoplayTimer);
+            autoplayTimer = null;
+        }
+    }
+    function restartAutoplay() {
+        if (autoplayTimer) startAutoplay();
+    }
+
+    prevBtns.forEach((b) => b.addEventListener('click', () => { go(-1); restartAutoplay(); }));
+    nextBtns.forEach((b) => b.addEventListener('click', () => { go(1); restartAutoplay(); }));
+
+    document.addEventListener('visibilitychange', () => {
+        if (document.hidden) stopAutoplay();
+        else startAutoplay();
+    });
 
     let resizeRaf = null;
     window.addEventListener('resize', () => {
@@ -90,8 +114,12 @@
         startY = null;
         if (Math.abs(dx) > 40) {
             go(dx < 0 ? 1 : -1);
+            restartAutoplay();
         }
     });
 
+    track.addEventListener('touchstart', stopAutoplay, { passive: true });
+
     update();
+    startAutoplay();
 })();
