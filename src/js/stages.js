@@ -3,13 +3,13 @@
     if (!root) return;
 
     const track = root.querySelector('[data-stages-track]');
-    const cards = Array.from(track.children);
+    const slides = Array.from(track.children);
     const prevBtn = root.querySelector('[data-stages-prev]');
     const nextBtn = root.querySelector('[data-stages-next]');
     const currentEl = root.querySelector('[data-stages-current]');
     const totalEl = root.querySelector('[data-stages-total]');
 
-    const total = cards.length;
+    const total = slides.length;
     totalEl.textContent = total;
 
     let index = 0;

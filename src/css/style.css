@@ -847,13 +847,6 @@ body {
 .stages__card--pos6 { grid-column: 1; grid-row: 3; background-position: 90% 15%; }
 .stages__card--pos7 { grid-column: 2 / span 2; grid-row: 3; background-position: 45% 60%; }
 
-.stages__card--slide:nth-child(1) { background-position: 10% 20%; }
-.stages__card--slide:nth-child(2) { background-position: 80% 30%; }
-.stages__card--slide:nth-child(3) { background-position: 30% 70%; }
-.stages__card--slide:nth-child(4) { background-position: 60% 40%; }
-.stages__card--slide:nth-child(5) { background-position: 20% 85%; }
-.stages__card--slide:nth-child(6) { background-position: 90% 15%; }
-.stages__card--slide:nth-child(7) { background-position: 45% 60%; }
 
 .stages__number {
     position: absolute;
@@ -886,8 +879,27 @@ body {
     display: none;
 }
 
+.stages__card--pos7 {
+    overflow: visible;
+}
+
 .stages__card--pos7 .stages__text {
     max-width: 446px;
+}
+
+.stages__card--pos7::before {
+    content: '';
+    position: absolute;
+    background-image: url('/src/img/stages/plane.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    pointer-events: none;
+
+    aspect-ratio: 400/234;
+    width: 49%;
+    bottom: 0;
+    right: -7.6%;
 }
 
 @media (max-width: 1199px) {
@@ -904,7 +916,7 @@ body {
     }
 
     .stages__header {
-        margin-bottom: 32px;
+        margin-bottom: 148px;
     }
 
     .stages__title {
@@ -921,21 +933,61 @@ body {
     }
 
     .stages__slider {
-        overflow: hidden;
+        overflow-x: clip;
+        overflow-y: visible;
+        padding-top: 140px;
+        margin-top: -140px;
     }
 
     .stages__list {
         display: flex;
+        align-items: stretch;
         list-style: none;
         margin: 0;
         padding: 0;
         transition: transform 0.4s ease;
     }
 
-    .stages__card--slide {
+    .stages__slide {
         flex: 0 0 100%;
-        min-height: 300px;
+        width: 100%;
+        min-width: 0;
+        min-height: 296px;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        box-sizing: border-box;
+    }
+
+    .stages__card--slide {
+        width: 100%;
+        flex: 1;
         padding: 62px 20px 20px 72px;
+        box-sizing: border-box;
+    }
+
+    .stages__card:has(.stages__item) {
+        position: relative;
+        padding: 62px 20px 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+
+    .stages__item {
+        position: relative;
+        padding-left: 52px;
+        min-height: 36px;
+    }
+
+    .stages__card--slide .stages__item .stages__number {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .stages__item .stages__text {
+        font-size: 18px;
     }
 
     .stages__card--slide .stages__number {
@@ -949,6 +1001,39 @@ body {
     .stages__card--slide .stages__text {
         font-size: 18px;
     }
+
+    .stages__card--pos7::before {
+        content: none;
+    }
+
+    .stages__card--bg1 {
+        background-position: 10% 20%;
+        overflow: visible;
+    }
+
+    .stages__card--bg1::before {
+        content: '';
+        position: absolute;
+        background-image: url('/src/img/stages/plane.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        pointer-events: none;
+
+        aspect-ratio: 400/234;
+        width: 335px;
+        top: -128px;
+        left: 50%;
+        transform: translateX(-50%);
+
+
+    }
+    .stages__card--bg2 { background-position: 80% 30%; }
+    .stages__card--bg3 { background-position: 30% 70%; }
+    .stages__card--bg4 { background-position: 60% 40%; }
+    .stages__card--bg5 { background-position: 20% 85%; }
+    .stages__card--bg6 { background-position: 90% 15%; }
+    .stages__card--bg7 { background-position: 45% 60%; }
 
     .stages__controls {
         display: flex;
@@ -982,7 +1067,7 @@ body {
     }
 
     .stages__title {
-        font-size: 28px;
+        font-size: 36px;
     }
 }
 
